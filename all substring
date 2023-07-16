@@ -1,0 +1,15 @@
+print all substring in a string
+
+s="abc"
+n=len(s)
+for i in range(n):
+    for j in range(i,n):
+        sub=s[i:j+1]
+        print(sub)
+---------------------------------->>>>>>>>>>>>>
+a
+ab
+abc
+b
+bc
+c
