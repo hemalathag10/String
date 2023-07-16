@@ -1,0 +1,16 @@
+3.	How do you find the longest substring of a string without repeating characters?
+
+s="geeksforgeeks"
+n=len(s)
+l,r=0,0
+d={0:0}
+m=0
+print(d)
+while r<n:
+    d[s[r]]=d.get(s[r],0)+1
+    while(d[s[r]]>1):
+        d[s[l]]=d.get(s[l])-1
+        l+=1
+    m=max(m,r-l+1)
+    r+=1
+print(m)
