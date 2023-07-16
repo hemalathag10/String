@@ -1,0 +1,14 @@
+11.	How do you find the longest substring of a string that contains only vowels
+
+s="theeare"
+c=0
+n=len(s)
+r,l=0,0
+d={0:0}
+v=['a','e','i','o','u','A','E','I','O','U']
+while r<n:
+    while(s[r] not in v and l<=r):
+        l+=1
+    c=max(c,r-l+1)
+    r+=1
+print(c)
