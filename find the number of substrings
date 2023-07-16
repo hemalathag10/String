@@ -1,0 +1,15 @@
+5.	How do you find the number of substrings of a string that contain a given substring
+
+s="geeksforgeeksforgeekfforsgeesforrkopfor"
+m="for"
+n=len(s)
+l=len(m)
+c=0
+k=s[0:l]
+for i in range(0,n):
+    if (m==s[i:i+l]):
+        c+=1
+print(c)
+-------------------------------------------->>>>>>>>>>>>>>>>>>>>
+=== RESTART: C:\Users\RRR\AppData\Local\Programs\Python\Python311\practice.py ==
+5
