@@ -1,0 +1,13 @@
+14.	How do you find the longest substring of a string that contains only whitespace characters?
+
+s="ab   b  cc  a          a"
+n=len(s)
+l,r,c=0,0,0
+while(r<n):
+    while(s[r]!=" " and l<=r):
+        l+=1
+    c=max(c,r-l+1)
+    r+=1
+print(c)
+
+
