@@ -1,0 +1,33 @@
+#User function Template for python3
+
+class Solution:
+    def longestPalindrome(self, S):
+        # code here
+        n=len(S)
+        m=0
+        start,end=0,0
+        for i in range(n):
+            for j in range(i,n):
+                k=S[i:j+1]
+                if m>n-i:
+                    break
+                if k==k[::-1] and m<len(k):
+                    m=len(k)
+                    start=i
+                    end=j+1
+        return S[start:end]
+                    
+
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__=='__main__':
+    t=int(input())
+    for _ in range(t):
+        
+        S = input().strip()
+        ob=Solution()
+        print(ob.longestPalindrome(S))
+# } Driver Code Ends
