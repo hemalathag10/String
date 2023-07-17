@@ -1,0 +1,18 @@
+13.	How do you find the longest substring of a string that contains only digits?
+
+s="gjhjhj34343jnjnj343242349878899000hfjhdjf"
+n=len(s)
+l,r,c=0,0,0
+d="0123456789"
+m=""
+while(r<n):
+    while(s[r] not in d and l<=r):
+        l+=1
+    if c<(r-l+1):
+        c=r-l+1
+        m=s[l:(l+r-l+1)]
+    r+=1
+print(c)
+print(m)
+
+
